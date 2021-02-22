@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>CRUDS Operations</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="w-100 vh-100 position-relative">
+        <div class="overlay"></div>
+        <!-- The video -->
+        <video autoplay muted loop id="myVideo">
+        <source
+          id="myVideoNow"
+          src="vedio/Laptop - 3145.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+        <div class="container bg-light py-3 search-box">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header text-center">
+                        <h1>System For Academy <i class="fas fa-graduation-cap"></i></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="challenge">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="inputs m-auto">
+                        <div class="data-inputs py-5">
+                            <form>
+                                <div class="form-group">
+                                    <input class="form-control studentName" type="text" placeholder="Student Name" id="studentName" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control studentEmail" type="email" placeholder="Email" id="studentEmail" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" type="number" placeholder="Student ID" id="studentId" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" type="number" placeholder="Phone(Ex:01024017950)" id="phoneNumber" required />
+                                </div>
+
+                                <div class="form-group reservedCourse">
+                                    <select name="" id="reservedCourse">
+                      <option value="" disabled selected>
+                        Select your Course
+                      </option>
+                      <option value="Full Stack Course">
+                        Full Stack Course
+                      </option>
+                      <option value="FrontEnd Course">FrontEnd Course</option>
+                      <option value="BackEnd Course">BackEnd Course</option>
+                      <option value="IT Course">IT Course</option>
+                      <option value="Android Course">Android Course</option>
+                      <option value="IOS Course">IOS Course</option>
+                      <option value="open Source  Course">
+                        open Source Course
+                      </option>
+                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control paid" type="text" placeholder="Paid Value  " id="paidValue" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <input disabled class="form-control residual" type="text" placeholder="Residual value " id="residulvalue" required />
+                                </div>
+
+                                <button type="submit" id="btn-add" class="btn btn-success">
+                    Add Student
+                  </button>
+
+                                <button id="btn-update" class="btn btn-info text-white">
+                    Update
+                  </button>
+
+                                <button onclick="onFormsubmit()" id="btn-reset" class="btn btn-primary">
+                    Reset Values
+                  </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mY-3 overflow-hidden tableContents">
+                        <div class="result py-5">
+                            <div class="search w-100 position-relative">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search" id="search" />
+                            </div>
+                            <table class="list" id="tableData">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>ID</th>
+                                    <th>Phone</th>
+                                    <th>Paid Value</th>
+                                    <th>Residual value</th>
+                                    <th>course</th>
+                                    <th>options</th>
+                                </tr>
+                                <tbody id="tableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <button class="toggleTable show btn btn-outline-dark float-right mb-5">
+            Show Table
+          </button>
+            </div>
+        </div>
+
+        <div class="message-error">error</div>
+
+        <div class="test"></div>
+    </header>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
